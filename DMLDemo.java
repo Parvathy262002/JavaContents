@@ -22,15 +22,15 @@ public class DMLDemo {
 			// "sysdba", "oracle");
 			System.out.println(conn);
 			st = conn.createStatement();
-			//int result = st.executeUpdate(
-				//	"create table student(regno int,sname varchar(20),subject1 int,subject2 int,subject3 int ,total int)");
-			// System.out.println(result);
-		/*	rows = st.executeUpdate(
+			int result = st.executeUpdate(
+					"create table student(regno int,sname varchar(20),subject1 int,subject2 int,subject3 int ,total int)");
+			 System.out.println(result);
+			rows = st.executeUpdate(
 					"insert into student(sname,regno,subject1,subject2,subject3) values('e',3,77,87,90)");
 			System.out.println(rows + " row(s) inserted");
 			rows = st.executeUpdate(
 					"insert into student(sname,regno,subject1,subject2,subject3) values('f',4,88,99,90)");
-			System.out.println(rows + " row(s) inserted");*/
+			System.out.println(rows + " row(s) inserted");
 			rows = st.executeUpdate("update student set total=subject1+subject2+subject3");
 			System.out.println(rows + "row(s)  updated");
 		} catch (SQLException e) {
